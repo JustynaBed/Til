@@ -1,0 +1,22 @@
+
+<div class="navbar">
+	<div class="container">
+			<div id="nav-link"  class="nav-link flex-end">
+				<a href="#" class="menu-listing-item"><i class="fas fa-bars"></i> </a>
+			</div>
+			<div id="categories-menu" class="categories-menu hidden">
+			<div id="menu-list" class="menu-list hidden">
+				{% for category in site.categories %}
+				<div id="nav-item" class="nav-item">
+					<div class="nav-btn">
+						<button
+								id="{{ category | first }}"
+								class="category-link">{{ category | first }}
+						</button>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+			</div>
+	</div>
+</div>

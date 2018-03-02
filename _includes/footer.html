@@ -1,0 +1,40 @@
+<footer class="footer">
+	<div class="container">
+		<div class="footer-info">
+			<div class="footer-links">
+				<p><a href="../links.html"><i class="fas fa-link"></i> Przydatne Linki</a></p>
+			</div>
+			<div class="footer-categories">
+				<p><a href="../category.html"><i class="fas fa-folder-open"></i> Wpisy według kategorii</a></p>
+			</div>
+		</div>
+		<div class="footer-end">
+			<div class="footer-socials">
+				<ul class="footer-socials-list">
+					{% if site.homesite_url %}
+					<li>
+						<a href="https://justynabed.github.io/" target="_blank">
+							<i class="fas fa-home"></i> {{ site.homesite_url }}
+						</a>
+					</li>
+					{% endif %}
+					{% if site.github_username %}
+					<li>
+						<a href="https://github.com/JustynaBed" target="_blank">
+							<i class="fab fa-github"></i> GitHub
+						</a>
+					</li>
+					{% endif %}
+					{% if site.linkedin_username %}
+					<li>
+						<a href="https://www.linkedin.com/in/justyna-bednarko-33972814a" target="_blank">
+							<i class="fab fa-linkedin"></i> LinkedIn
+						</a>
+					</li>
+					{% endif %}
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</footer>

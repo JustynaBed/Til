@@ -1,0 +1,444 @@
+$my-bg-color: #1f211a;
+$a-color: #0a7d83;
+$a-color-hover: #5ea3a5;
+$a-nav-color: #59a1a4;
+$a-nav-color-hover: #e0e9ff;
+$small-info-color: #aaaaaa;
+$button-font-color: #f2f2f2;
+$button-bg-color: #03a7ad;
+$button-bg-color-hover: #009cff;
+$font-stack-OpenSans: 'Open Sans', Ubuntu, sans-serif;
+$font-stack-Ubuntu: Ubuntu, 'Open Sans', sans-serif;
+
+body {
+	background-color: #f0f5ff;
+	margin: 0;
+	min-height: 100vh;
+}
+
+.top-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.hidden {
+	display: none;
+}
+
+.container {
+	width: 100%;
+	max-width: 1100px;
+	min-width: 200px;
+	margin: 0 auto;
+}
+
+.post {
+	font-family: $font-stack-OpenSans;
+	width: 90%;
+	margin: 25px;
+
+	h2 {
+		font-family: $font-stack-Ubuntu;
+		font-weight: bolder;
+		font-size: 35px;
+		color: $a-color;
+		margin-bottom: 0;
+
+	}
+
+	h3 {
+		font-family: $font-stack-Ubuntu;
+		font-weight: bolder;
+		font-size: 30px;
+		color: $a-color;
+		margin-bottom: 0;
+
+	}
+
+	h4 {
+		font-family: $font-stack-Ubuntu;
+		font-weight: bolder;
+		font-size: 25px;
+		color: $a-color;
+		margin-bottom: 0;
+
+	}
+
+	.post-date, .category-info {
+		margin: 0 8px;
+		font-size: 12px;
+		color: $small-info-color;
+	}
+
+
+	article {
+		font-size: 18px;
+		line-height: 1.5;
+	}
+}
+
+.content {
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto;
+	font-family: $font-stack-OpenSans;
+
+	h1 {
+		font-family: $font-stack-Ubuntu;
+		font-size: 26px;
+		margin-bottom: 0;
+	}
+	.post-date, .category-info, .post-tags {
+		margin: 0 8px;
+		font-size: 13px;
+		color: $small-info-color;
+	}
+
+	a {
+		color: $a-color;
+		text-decoration: none;
+	}
+	a:hover {
+		color: $a-color-hover;
+	}
+
+	.post-description {
+		color: $small-info-color;
+		font-size: 14px;
+	}
+
+	.post-excerpt {
+		font-size: 15px;
+		margin: 0 5px;
+	}
+
+	.read-more {
+		text-align: right;
+	}
+
+	button {
+		width: 150px;
+		background-color: $button-bg-color;
+		font-family: $font-stack-Ubuntu;
+		color: $button-font-color;
+		font-size: 12px;
+		padding: 8px 20px;
+		outline: none;
+		border: none;
+		border-radius: 10px;
+		cursor: pointer;
+	}
+
+	.home-content {
+		width: inherit;
+		display: flex;
+		padding-top: 50px;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+
+		.all-posts, .links {
+			width: 90%;
+			display: block;
+		}
+		.aside {
+			display: none;
+			font-family: $font-stack-Ubuntu;
+			padding: 5px;
+			height: auto;
+			a {
+				font-size: 15px;
+			}
+
+			h3 {
+				color: $a-color;
+				font-family: $font-stack-Ubuntu;
+			}
+			width: 75%;
+			margin-top: 25px;
+			.posts-by-category {
+				.post-title {
+
+				}
+
+				.post-category {
+					color: $small-info-color;
+					font-size: 13px;
+
+				}
+				ul {
+					padding: 0;
+				}
+				li {
+					list-style: none;
+					padding: 5px;
+				}
+			}
+
+
+			.aside-links {
+				padding-top: 30px;
+			}
+		}
+
+		.posts-in-categories {
+			margin-top: 20px;
+			width: inherit;
+			color: $my-bg-color;
+			padding: 15px;
+			.category-info {
+				font-size: 11px;
+			}
+			h3 {
+				margin: 0;
+			}
+			ul {
+				list-style: none;
+				margin: 0;
+				padding-bottom: 15px;
+				padding-left: 5px;
+			}
+
+			li {
+				//margin: 0;
+			}
+		}
+
+		.links {
+			padding: 15px;
+			.links-group {
+				padding-top: 15px;
+			}
+			h3 {
+				color: $my-bg-color;
+				margin: 5px;
+			}
+
+			a {
+				padding-left: 10px;
+			}
+		}
+
+	}
+}
+
+header {
+	background-color: $my-bg-color;
+	font-family: $font-stack-Ubuntu;
+	min-height: 50px;
+	.name {
+		display: flex;
+		text-decoration: none;
+		color: $a-nav-color;
+		font-size: 15px;
+		padding: 20px 25px;
+		position: absolute;
+		z-index: 1;
+		text-transform: uppercase;
+	}
+
+	.name:hover {
+		color: $a-nav-color-hover;
+	}
+}
+
+.navbar {
+	background-color: $my-bg-color;
+	font-family: $font-stack-Ubuntu;
+	color: $a-color;
+	display: flex;
+
+
+	.flex-end {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.flex-end-row {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+	a {
+		color: $a-color;
+	}
+
+	.container {
+		max-width: 1100px;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	.nav-link {
+		font-size: 25px;
+		position: absolute;
+		top: -40px;
+		right: 20px;
+	}
+
+	.menu-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 0 15px;
+		.nav-item {
+			display: flex;
+			justify-content: space-between;
+			.nav-btn {
+				button {
+					color: $a-color;
+					background: none;
+					border: none;
+					cursor: pointer;
+					padding: 5px 10px;
+
+				}
+
+				button:hover, button:focus {
+					color: $a-nav-color-hover;
+					outline: none;
+				}
+			}
+
+		}
+	}
+
+}
+
+.footer {
+	background-color: $my-bg-color;
+	font-family: $font-stack-OpenSans;
+	padding: 10px 25px;
+	width: inherit;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: nowrap;
+
+	a {
+		color: $a-color-hover;
+		text-decoration: none;
+	}
+	a:hover {
+		color: $a-color;
+	}
+
+	.footer-info {
+		display: flex;
+		padding-left: 40px;
+		text-transform: uppercase;
+		font-size: 15px;
+		flex-wrap: wrap;
+
+		p {
+			margin: 8px 0;
+		}
+		.footer-links {
+			width: 100%
+		}
+		.footer-categories {
+			width: 100%;
+		}
+	}
+
+	.footer-end {
+		position: relative;
+
+	}
+	.footer-socials {
+
+		li{
+			list-style: none;
+			padding: 3px 0;
+		}
+		i {
+			color: $a-color;
+			padding-right: 5px;
+		}
+	}
+
+}
+
+
+@media (min-width: 1100px) {
+	header {
+		.name {
+			font-size: 20px;
+			padding: 15px;
+		}
+	}
+	.content {
+		.home-content {
+			flex-wrap: nowrap;
+			justify-content: space-around;
+
+			.all-posts {
+				width: 65%;
+				display: block;
+			}
+			.aside {
+				display: block;
+				width: 35%;
+			}
+		}
+	}
+
+	.navbar {
+		.menu-list {
+			justify-content: flex-end;
+		}
+
+		.nav-link {
+			font-size: 30px;
+			right: 15px;
+		}
+
+		.menu-list {
+			.nav-item {
+				margin: 0 10px;
+			}
+			button {
+				font-size: 16px;
+			}
+		}
+	}
+
+	.footer {
+		.footer-info {
+			justify-content: flex-end;
+			padding-bottom: 20px;
+			p {
+				margin: 8px 0;
+			}
+			.footer-links {
+				width: 25%;
+			}
+			.footer-categories {
+				width: 25%;
+			}
+		}
+
+		.footer-end:before {
+			content: '';
+			position: absolute;
+			border-top: 1px dotted $a-color-hover;
+			top: -20px;
+			height: 5px;
+			width: 100%
+		}
+
+		.footer-socials-list {
+			display: flex;
+			justify-content: center;
+			ul {
+				display: inline;
+			}
+			li {
+
+				padding: 0 25px;
+			}
+
+		}
+	}
+}

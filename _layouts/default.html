@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pl">
+{% include head.html %}
+<body>
+
+<div class="top-fixed">
+	{% include header.html %}
+	{% include menu.html %}
+</div>
+
+
+	<div class="content">
+		<div class="container ">
+			{{ content }}
+		</div>
+	</div>
+
+{% include footer.html %}
+
+
+<script src="../js/menuCategoriesFilter.js"></script>
+</body>
+</html>
