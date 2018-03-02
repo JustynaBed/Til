@@ -6,7 +6,7 @@ layout: default
 	<div class="all-posts">
 	{% for post in site.posts %}
 		<div class="post {{post.categories | join: ' '}}">
-			<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+			<h3><a href="{{site.baseurl}}/{{ post.url }}">{{ post.title }}</a></h3>
 
 			<span class="post-date"><i class="fas fa-calendar-alt"></i> {{ post.date | date: "%d-%m-%Y" }} </span>
 			<span class="category-info"><i class="fas fa-folder-open"></i> {{ post.categories | join: ', ' }} </span>
@@ -18,7 +18,7 @@ layout: default
 				<p>{{ post.excerpt | truncatewords:30  }}</p>
 			</div>
 			<div class="read-more">
-				<button onclick="location.href='{{ post.url }}'">czytaj dalej >> </button>
+				<button onclick="location.href='{{site.baseurl}}/{{ post.url }}'">czytaj dalej</button>
 			</div>
 		</div>
 	{% endfor %}

@@ -2,7 +2,7 @@
 	<h3 class="aside-title"><i class="fas fa-list-alt"></i> Ostatnie Wpisy</h3>
 	<ul>
 		{% for post in site.posts limit:10 %}
-		<li><a href="{{ post.url }}">
+		<li><a href="{{site.baseurl}}/{{ post.url }}">
 			<span class="post-title">{{ post.title }}</span>
 		</a>
 			<span class="post-category"><i class="fas fa-folder-open"></i>
@@ -13,6 +13,6 @@
 </div>
 
 <div class="aside-links">
-	<h3><a href="../links.html"><i class="fas fa-link"></i> Przydatne Linki</a></h3>
-	<h3><a href="../category.html"><i class="fas fa-folder-open"></i> Wpisy według kategorii</a></h3>
+	<h3><a href="{{site.baseurl}}/links.html"><i class="fas fa-link"></i> Przydatne Linki</a></h3>
+	<h3><a href="{{site.baseurl}}/category.html"><i class="fas fa-folder-open"></i> Wpisy według kategorii</a></h3>
 </div>
