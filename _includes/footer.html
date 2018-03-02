@@ -13,21 +13,21 @@
 				<ul class="footer-socials-list">
 					{% if site.homesite_url %}
 					<li>
-						<a href="https://justynabed.github.io/" target="_blank">
+						<a href="{{ site.homesite_url }}" target="_blank">
 							<i class="fas fa-home"></i> {{ site.homesite_url }}
 						</a>
 					</li>
 					{% endif %}
 					{% if site.github_username %}
 					<li>
-						<a href="https://github.com/JustynaBed" target="_blank">
+						<a href="https://github.com/{{ site.github_username }}" target="_blank">
 							<i class="fab fa-github"></i> GitHub
 						</a>
 					</li>
 					{% endif %}
 					{% if site.linkedin_username %}
 					<li>
-						<a href="https://www.linkedin.com/in/justyna-bednarko-33972814a" target="_blank">
+						<a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank">
 							<i class="fab fa-linkedin"></i> LinkedIn
 						</a>
 					</li>
