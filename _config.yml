@@ -22,11 +22,10 @@ description: >- # this means to ignore newlines until "baseurl:"
 #baseurl: 'https://justynabed.github.io' # the subpath of your site, e.g. /blog
 url: '/Til' # the base hostname & protocol for your site, e.g. http://example.com
 
-homesite_url: user
-github_username:  user
-linkedin_username: user
-facebook_username: user
-email: user@gmail.com
+homesite_url: justynabed.github.io
+github_username:  JustynaBed
+linkedin_username: justyna-bednarko
+email: justyna.bednarko@gmail.com
 
 
 # Build settings
