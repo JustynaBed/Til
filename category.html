@@ -10,7 +10,7 @@ title: Categories
 		{% for post in category[1] %}
 		<li class="posts-info">
 			<span class="post-date"> {{ post.date | date: "%d-%m-%Y" }} </span>
-			<a href="{{ post.url }}">{{ post.title }}</a>
+			<a href="{{site.baseurl}}/{{ post.url }}">{{ post.title }}</a>
 			<span class="category-info"><i class="fas fa-folder-open"></i> {{ post.categories | join: ', ' }} </span>
 		</li>
 		{% endfor %}
