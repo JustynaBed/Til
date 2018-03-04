@@ -56,10 +56,10 @@ Zapisy kolorów w CSS:
 {% highlight ruby %}
 div {
  background-color: rgb(250, 250, 250); #fff (#ffffff) 'white'
-}
+ }
 {% endhighlight %}
 
-# **NIEPRZEZROCZYSTOŚĆ**
+# **OPACITY**
 
 W CSS3 wprowadzona została właściwość opacity, umożliwiająca określenie nieprzezroczystości elementu. Wartością tej własności może być liczba z zakresu od 0.0 do 1.0 ( a zatem użycie wartości 0.5 oznacza że element będzie w 50 % nieprzezroczysty). Im większy % tym przezroczystość nowo powstające koloru będzie mniejsza.
 
@@ -108,7 +108,7 @@ rgb (232, 125, 35)
 Pamiętając, że:
 Cyfry 0-9 mają te same wartości co w systemie dziesiętnym, natomiast litery odpowiadają następującym wartościom: A = 10, B = 11, C = 12, D = 13, E = 14 oraz F = 15.
 
-Pierwsza para kodu szesnastkowego to: `#E8`
+*Pierwsza para kodu szesnastkowego to:* `#E8`
 
 + Obliczenie drugiej pary kodu szesnastkowego:
 
@@ -118,7 +118,7 @@ Pierwsza para kodu szesnastkowego to: `#E8`
 
 125 - 112= **13**
 
-Uzupełnienie kodu szesnastkowego to: `#E87D`
+*Uzupełnienie kodu szesnastkowego to:* `#E87D`
 
 + Obliczenie trzeciej pary kodu szesnastkowego:
 
@@ -128,7 +128,7 @@ Uzupełnienie kodu szesnastkowego to: `#E87D`
 
 35 - 32= **3**
 
-Nasz kolor w zapisie szesnastkowym: `#E87D23`
+*Nasz kolor w zapisie szesnastkowym:* `#E87D23`
 
 
 # **SPRAWDZANIE KONTRASTU**
