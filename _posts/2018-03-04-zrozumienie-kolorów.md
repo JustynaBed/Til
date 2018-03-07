@@ -1,7 +1,7 @@
 ---
 categories: [css]
 description: Kolory naprawdę potrafią ożywić tworzenie strony WWW. Poznaj sposoby określania kolorów w kaskadowych arkuszach stylów.
-categories: css html
+categories: css
 tags: [css]
 ---
 Każdy kolor na ekranie monitora jest tworzony jako połączenie pewnych ilości trzech kolorów podstawowych czerwonego, zielonego, niebieskiego. Kolory nie tylko ożywiają stronę internetową lecz także ułatwiają tworzenie odpowiedniego nastroju i wzbudzają emocje.
