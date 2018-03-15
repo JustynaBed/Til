@@ -5,26 +5,153 @@ tags: [js, ES6]
 ---
 Wraz z rozwojem JS doszły nam nowsze zapisy takie jak let (zmienna) i const (stała), które naprawiają część problemów, które miał var.
 
+# 1. Omówienie ```var```#
+
+**a) ZASIĘG FUNKCYJNY** (konstrukcja ```var``` działa w kontekście funkcji).
+
+{% highlight ruby %}
+for (var i = 1; i <= 3; i++){ 
+console.log(i) 
+} 
+
+console.log('i = ', i)
+// 1
+// 2
+// 3
+// i =  4
+{% endhighlight %}
+
+**b) można zmieniać wartości:**
+
+
+{% highlight ruby %}
+var x = 3;
+x           // 3
+var x = 4; 
+x           //4
+{% endhighlight %}
+
+**c) występuje hoisting:**
+
+
+{% highlight ruby %}
+console.log(text2); // tekst"
+var text2 = "tekst";
+{% endhighlight %}
+
+
+# 2. Omówienie ```let``` i ```const```#
+
+**a) ZASIĘG BLOKOWY** (konstrukcja ```let``` w kontekście bloku kodu).
+
+{% highlight ruby %}
+for (let i = 1; i <= 3; i++){ 
+console.log(i) 
+} 
+
+console.log('i = ', i)
+// 1
+// 2
+// 3
+// Uncaught ReferenceError: i is not defined
+    at <anonymous>:4:21
+{% endhighlight %}
+
+**b) Nie można zmieniać wartości.** Przy deklaracji tej samej zmiennej jest error (chroni przed nadpisaniem):
+
+
+{% highlight ruby %}
+let x = 3;
+x           // 3
+let x = 4; // error
+
+
+const x = 3;
+x  // 3
+const x = 4; //error
+
+{% endhighlight %}
+
+**c) brak występowania hoistingu:**
+
+
+{% highlight ruby %}
+console.log(text2);         // błąd
+let text2 = "przykładowy tekst";
+{% endhighlight %}
+
 
 {% highlight ruby %}
 {% endhighlight %}
 
+# 3. Omówienie różnic między ```let``` i ```const```#
+
+### ```let```###
+
+
+a) **Możemy zadeklarować ```let```** bez przypisania jej wartości na samym początku.
+
+{% highlight ruby %}
+let x
+{% endhighlight %}
+
+**b)** ```Let``` tworzy zmienne, którym potem **możemy zmieniać wartość**.
 
 
 {% highlight ruby %}
-
+let b = 5
+b   // 5
+b = 7
+b   // 7
 {% endhighlight %}
-
 
 
 {% highlight ruby %}
+let prop = {
+    max : 10
+}
+
+prop.max = 15
+prop // {max: 15}
+prop = {} // {}
 
 {% endhighlight %}
 
+**c)** Słówka ```let``` używamy najczęściej do deklarowania pętli.
+
+### ```const```###
 
 
+a) **Nie możemy zadeklarować ```const```** bez przypisania jej wartości na samym początku.
+
+{% highlight ruby %}
+const x     //error
+
+{% endhighlight %}
+
+WARTOŚĆ PRZYPISUJEMY TYLKO W MOMENCIE DEKLARACJI !!
+
+**b)** ```Const``` tworzy zmienne, którym potem **nie możemy zmieniać zawartości**, ale możemy zmieniać zawartość np. obiektu, tablicy, albo kluczy.
 
 
 {% highlight ruby %}
+const a = 5
+a       // 5
+a = 7   // error 
 {% endhighlight %}
 
+
+{% highlight ruby %}
+const prop = {
+max: 10
+}
+
+prop.max = 15; // 15
+prop;       // {max: 15}
+prop = {};  // error
+prop.min = 5;  // 5
+prop        // {max: 10, min: 10}
+
+{% endhighlight %}
+
+**c)** Słówka ```const``` używamy najczęściej do deklarowania obiektów i tablic.
