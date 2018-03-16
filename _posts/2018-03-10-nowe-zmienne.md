@@ -21,7 +21,7 @@ console.log('i = ', i)
 // i =  4
 {% endhighlight %}
 
-**b) można zmieniać wartości:**
+**b) można ponownie deklarować tą samą zmienną:**
 
 
 {% highlight ruby %}
@@ -57,7 +57,7 @@ console.log('i = ', i)
     at <anonymous>:4:21
 {% endhighlight %}
 
-**b) Nie można zmieniać wartości.** Przy deklaracji tej samej zmiennej jest error (chroni przed nadpisaniem):
+**b) Nie można deklarować ponownie tej samej zmiennej.** Przy deklaracji tej samej zmiennej jest error (chroni przed nadpisaniem):
 
 
 {% highlight ruby %}
