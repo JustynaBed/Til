@@ -1,5 +1,4 @@
 ---
-description: let, const vs var- dzięki nim definiujemy zmienną, ale…
 categories: React
 tags: [React, props, state, JSX, DOM, VDOM]
 ---
