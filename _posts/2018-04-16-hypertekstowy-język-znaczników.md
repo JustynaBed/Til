@@ -4,15 +4,10 @@ categories: html
 tags: [html]
 ---
 
-**HTML** (ang. HyperText Markup Language)- Hipertekstowy język znaczników, wykorzystywany do tworzenia stron internetowych, aplikacji  internetowych. Służy do zapisywania treści strony.
+**HTML** (ang. HyperText Markup Language)- Hipertekstowy język znaczników, 
+wykorzystywany do tworzenia stron internetowych, aplikacji  internetowych. Służy do zapisywania treści strony.
 
-**HTML5** to następca języka HTML4, większość zmian odnosi się do sposobu prezentacji plików audio, wideo i grafiki (w tym zdjęć), jak również modyfikowania wyglądu i zachowania tekstów.
- Zmiany:
-+ wprowadzenie atrybutu data-*
-+ brak typów dla elementów `<script>` i `<link>`
-+ `<figure>`, `<video>`, `<audio>`, `<truck>`, `<embed>`, `<progress>`, `<meter>`, `<time>`, `<template>` – odpowiadające na potrzeby współczesnych, multimedialnych stron www.  
-+ `<section>`, `<article>`, `<header>`, `<main>`, `<footer>`, `<nav>`, `<output>` – przeznaczone do budowania struktury strony.
-+ `<math>`- pozwala na wyświetlenie dowolnie złożonych wzorów matematycznych, przydatne w publikacjach naukowych.
+
 
 
 
@@ -52,7 +47,7 @@ Znacznik **`<head>`** zawiera znaczniki, ułatwiające przeglądarce odpowiednio
 Znacznik **`<meta charset="utf-8">`** szczegółowo informuje przeglądarkę jak to zrobić, określa kodowanie znaków w pliku HTML.
 
 
-Znacznik **`<meta name="viewport" content="width=device-width, initial-scale=1.0">`** powoduje, że szerokość contentu na przeglądarki (width) 
+Znacznik **`<meta name="viewport" content="width=device-width, initial-scale=1.0">`** powoduje, że szerokość contentu przeglądarki (width) 
 zostanie ustawiona na szerokość równą rozdzielczości poziomej urządzenia (device-width). 
 Powoduje również, że początkowa skala wyświetlanego contentu to 100%.
 
@@ -72,7 +67,7 @@ Znacznik **`<main>`** zawiera treść, która jest unikalna na całej stronie. Z
 Znacznik **`<footer>`** definiuje stopkę strony lub sekcji.
 
 
-Jeśli zapomnimy zamknąć jakiś znacznik, który powinien być zamknięty to zazwyczaj przeglądarka spróbuje go wyświetlić tak, jak potrafi.
+Jeśli zapomnimy zamknąć jakiś znacznik to zazwyczaj przeglądarka spróbuje wyświetlić go w taki sposób jak potrafi.
 
 
 # **2. Semantyka HTML**
@@ -104,5 +99,42 @@ Wykorzystanie znaczników zgodnie z przeznaczeniem oznacza używanie :
 
 Nagłówki umieszczaj w znacznikach nagłówków
 
+# **3. Co nowego w HTML5:**
+**HTML5** to następca języka HTML4, większość zmian odnosi się do sposobu prezentacji plików audio, wideo i grafiki (w tym zdjęć), jak również modyfikowania wyglądu i zachowania tekstów.
+ Zmiany:
++ wprowadzenie atrybutu data-*
 
+{% highlight ruby %}
 
+<ul>
+    <li id="animal" data-type="cat">Cod</li> 
+</ul>
+
+let animalType = document.getElementById('animal');
+
+animalType.dataset.type // 'cat'
+
+animalType.dataset.type = 'fish'
+
+animalType.dataset.type // 'fish'
+
+{% endhighlight %}
+
+Ten atrybut umożliwia tworzenie własnych, niestandardowych atrybutów strony.
+Nazwę atrybutu podaje się za przedrostkiem `data`, nazwa ta nie może zawierać wielkich liter, natomiast może zawierać liczby. 
+`HTMLElement.dataset` umożliwia dostęp oraz zmianę danych niestandardowych atrybutów `data`.
+
++ brak typów dla elementów `<script>` i `<link>`
+{% highlight ruby %}
+
+HTML4
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+HTML5
+<link rel="stylesheet" href="styles.css">
+
+{% endhighlight %}
+
++ `<figure>`, `<video>`, `<audio>`, `<truck>`, `<embed>`, `<progress>`, `<meter>`, `<time>`, `<template>` – odpowiadające na potrzeby współczesnych, multimedialnych stron www.  
++ `<section>`, `<article>`, `<header>`, `<main>`, `<footer>`, `<nav>`, `<output>` – przeznaczone do budowania struktury strony.
++ `<math>`- pozwala na wyświetlenie dowolnie złożonych wzorów matematycznych, przydatne w publikacjach naukowych.
