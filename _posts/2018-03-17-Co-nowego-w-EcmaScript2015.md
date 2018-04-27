@@ -42,6 +42,58 @@ const wordUp = word =>
     word.toUpperCase()
 {% endhighlight %}
 
+Arrow functions to nie tylko inny sposób zapisu funkcji.
+W odróżnieniu do standardowych funkcji Arrow functions nie tworzy własnego
+zakresu słówka kluczowego `this`.
+
+
+{% highlight ruby %}  
+   function Person (name) {
+       this.name = name
+       this.sayHello = function() {
+           console.log('Hello ' + this.name)
+       }
+   }
+   
+   var userOne = new Person('Justyna'); 
+   
+   userOne // Person {name: "Justyna", sayHello: ƒ}
+   
+   var sayHelloUser = userOne.sayHello
+   
+   sayHelloUser() // Hello 
+                     undefined       
+{% endhighlight %}
+
+{% highlight ruby %}  
+  function Person (name) {
+      this.name = name
+      this.sayHello = () => {
+          console.log(`Hello ${this.name}`)
+      }
+  }
+  
+  let userOne = new Person('Justyna'); 
+  
+  userOne // Person {name: "Justyna", sayHello: ƒ}
+  
+  let sayHelloUser = userOne.sayHello
+  
+  sayHelloUser() // Hello Justyna         
+{% endhighlight %}
+
+
+Arrow Functions nie możemy użyć jako konstruktora przy pomocy operatora `new`.
+
+{% highlight ruby %}  
+   let Person2 = (name) => {
+       this.name = name;
+   }
+   
+   let newUser = new Person2('Tom'); // Uncaught TypeError: Person2 is not a constructor
+                                        at <anonymous>:1:16
+{% endhighlight %}
+                               
 # **2. Templete string**#
 
 
