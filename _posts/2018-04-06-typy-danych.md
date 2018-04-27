@@ -1,7 +1,7 @@
 ---
 description: typeof zmienne
-categories: js
-tags: [js]
+categories: JS
+tags: [JS]
 ---
 
 

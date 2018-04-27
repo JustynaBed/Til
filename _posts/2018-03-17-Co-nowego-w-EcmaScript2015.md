@@ -1,6 +1,6 @@
 ---
-categories: js
-tags: [js, ES6]
+categories: JS ES6
+tags: [JS ES6]
 ---
 
 **ECMASript (ES)** jest międzynarodowym standardem języka JavaScript, zapewniającym ujednolicenie pisania kodu.

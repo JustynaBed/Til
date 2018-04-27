@@ -1,7 +1,7 @@
 ---
 description: Jakie nowości zostały wprowadzone w HTML5? Jak zbudowana jest strona zapisana za pomocą tej wersji?
-categories: html
-tags: [html]
+categories: HTML
+tags: [HTML]
 ---
 
 **HTML** (ang. HyperText Markup Language)- Hipertekstowy język znaczników, 
@@ -33,15 +33,14 @@ wykorzystywany do tworzenia stron internetowych, aplikacji  internetowych. Słu�
 {% endhighlight %}
 
 
-Zapis **`<!DOCTYPE html>`** mówi przeglądarce, że korzystamy z HTML 5. Wpływa na to jak wygląda strona.
+Zapis **`<!DOCTYPE html>`** mówi przeglądarce, że korzystamy z **HTML 5**. Wpływa na to jak wygląda strona.
 
 
-Pierwszym znacznikiem na stronie jest **`<html>`**, zawsze pod deklaracją <!DOCTYPE html>. Znacznik zamykający</html> 
-zawsze jest na końcu strony. Między nimi znajdują się wszystkie inne znaczniki tworzące tę stronę, 
-dlatego znacznik końcowy jest na samym końcu.
+Pod deklaracją **`<!DOCTYPE html>`**  występuje znacznik **`<html>`**. Znacznik zamykający **`</html>`** 
+zawsze jest na końcu strony. Między nimi znajdują się wszystkie inne znaczniki tworzące tę stronę.
 
 
-Znacznik **`<head>`** zawiera znaczniki, ułatwiające przeglądarce odpowiednio wyświetlić stronę. 
+W **`<head>`** znajdują się znaczniki, ułatwiające przeglądarce odpowiednio wyświetlić stronę. 
 
 
 Znacznik **`<meta charset="utf-8">`** szczegółowo informuje przeglądarkę jak to zrobić, określa kodowanie znaków w pliku HTML.
@@ -49,19 +48,19 @@ Znacznik **`<meta charset="utf-8">`** szczegółowo informuje przeglądarkę jak
 
 Znacznik **`<meta name="viewport" content="width=device-width, initial-scale=1.0">`** powoduje, że szerokość contentu przeglądarki (width) 
 zostanie ustawiona na szerokość równą rozdzielczości poziomej urządzenia (device-width). 
-Powoduje również, że początkowa skala wyświetlanego contentu to 100%.
+Wpływa również na to, że początkowa skala wyświetlanego contentu to 100%.
 
 
 Znacznik **`<title>`** określa tytuł dokumentu, wyświetlany jest w pasku tytułu przeglądarki lub zakładki.
 
 
-Znacznik **`<style>`** stosowany do stylów wewnątrz dokumentu HTML. 
+Znacznik **`<style>`** stosowany do stylów wewnątrz dokumentu HTML (internal style). 
 
 
 Znacznik **`<header>`** definiuje nagłówek strony lub sekcji.
 
 
-Znacznik **`<main>`** zawiera treść, która jest unikalna na całej stronie. Znacznik ten może zostać na stronie użyty tylko jeden raz.
+Znacznik **`<main>`** zawiera treść, która jest unikalna na całej stronie. Na stronie może zostać użyty tylko raz.
 
 
 Znacznik **`<footer>`** definiuje stopkę strony lub sekcji.
@@ -101,6 +100,7 @@ Nagłówki umieszczaj w znacznikach nagłówków
 
 # **3. Co nowego w HTML5:**
 **HTML5** to następca języka HTML4, większość zmian odnosi się do sposobu prezentacji plików audio, wideo i grafiki (w tym zdjęć), jak również modyfikowania wyglądu i zachowania tekstów.
+ 
  Zmiany:
 + wprowadzenie atrybutu data-*
 
@@ -120,7 +120,7 @@ animalType.dataset.type // 'fish'
 
 {% endhighlight %}
 
-Ten atrybut umożliwia tworzenie własnych, niestandardowych atrybutów strony.
+Atrybut ten umożliwia tworzenie własnych, niestandardowych atrybutów strony.
 Nazwę atrybutu podaje się za przedrostkiem `data`, nazwa ta nie może zawierać wielkich liter, natomiast może zawierać liczby. 
 `HTMLElement.dataset` umożliwia dostęp oraz zmianę danych niestandardowych atrybutów `data`.
 

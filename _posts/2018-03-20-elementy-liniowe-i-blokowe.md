@@ -1,7 +1,7 @@
 ---
 description: Przypomnij, które znaczniki są elementami blokowymi,a które liniowymi.
-categories: html
-tags: [html]
+categories: HTML
+tags: [HTML]
 ---
 
 

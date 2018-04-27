@@ -1,6 +1,6 @@
 ---
 description: JavaScript jako sktyptowy język programownia. Zbiór najważniejszych definicji tego języka oraz jego różnice pomiędzy językiem programowania JAVA 
-categories: js
+categories: JS
 tags: [JavaScript, JAVA]
 ---
 
