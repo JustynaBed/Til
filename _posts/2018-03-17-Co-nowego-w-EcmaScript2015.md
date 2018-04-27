@@ -43,10 +43,10 @@ const wordUp = word =>
 {% endhighlight %}
 
 Arrow functions to nie tylko inny sposób zapisu funkcji.
-W odróżnieniu do standardowych funkcji Arrow functions nie tworzy własnego
+W odróżnieniu do standardowych funkcji, Arrow functions nie tworzy własnego
 zakresu słówka kluczowego `this`.
 
-
+ES5:
 {% highlight ruby %}  
    function Person (name) {
        this.name = name
@@ -65,6 +65,8 @@ zakresu słówka kluczowego `this`.
                      undefined       
 {% endhighlight %}
 
+
+ES6:
 {% highlight ruby %}  
   function Person (name) {
       this.name = name
@@ -86,11 +88,11 @@ zakresu słówka kluczowego `this`.
 Arrow Functions nie możemy użyć jako konstruktora przy pomocy operatora `new`.
 
 {% highlight ruby %}  
-   let Person2 = (name) => {
+   let Person = (name) => {
        this.name = name;
    }
    
-   let newUser = new Person2('Tom'); // Uncaught TypeError: Person2 is not a constructor
+   let newUser = new Person('Tom'); // Uncaught TypeError: Person2 is not a constructor
                                         at <anonymous>:1:16
 {% endhighlight %}
                                
@@ -141,24 +143,94 @@ console.log(a1, b2, b3)
 
 # **4. Klasy**#
 
+Klasa definuje obiekt, który jest stworzony na podstawie tej klasy. Nowo powstały obiekt jest nazywany instancją klasy.
+Klasa definiuje składowe poprzez **pola klasy**.
+Stan początkowy poprzez **konstruktor**.
+Zachowanie obiektu poprzez **metody klasy**.
+
+Nowo powstały obiekt jest nazywany **instancją klasy** i tworzony jest za pomocą operatora `new`.
+
+ES5:
 {% highlight ruby %}
-class Person {
-// object constructor
-// (executed when new Person())
-constructor(name) {
-this.name = name
-}
-// class method
-getName() {
-console.log(this.name)
-}
-}
+function chemicalElement (name, mass) {
+  this.name = name;
+  this.mass = mass;
+};
+
+chemicalElement.prototype.getName = function getName () {
+  return this.name;
+};
+
+chemicalElement.prototype.getMass = function getMass () {
+  return this.mass + ' u' ;
+};
+
+var newElement = new chemicalElement ('Hydrogen', '1');
+newElement.getMass() // "1 u"
 {% endhighlight %}
 
+ES5:
+{% highlight ruby %}
+class chemicalElement {
+    constructor (name, mass) {
+        this.name = name;
+        this.mass = mass;
+    }
+    
+    getName() {
+        return this.name ;
+    }
+    
+    getMass() {
+        return (`${this.mass} u`);
+    }
+}
+
+let newElement = new chemicalElement ('Calcium', '40');
+newElement.getMass() // "40 u"
+{% endhighlight %}
+
+W nowym zapisie mamy konstruktor z dwoma argumentami: `name`, `mass`, dwa pola oraz dwie metody klasy: `getName()`, `getName()`.
+Warto wspomnieć, że jeśli chcielibyśmy w szablonie `chemicalElement` posiadać metodę informującą o roku odkrycia danego pierwiastka chemicznego,
+to możemy skorzystać z **mechanizmu dziedziczenia klas**.
+
+{% highlight ruby %}
+class chemicalElementNewClass extends chemicalElement {
+
+  constructor (name, mass, year) {
+    super(name, mass, year); this.year = year
+  }
+
+  getName () {
+    return (`The name of this chemical element: ${super.getName()}`);
+  }
+  
+  getYear () {return (`This chemical element was discovered: ${this.year}`)}
+}
+
+let newElement = new chemicalElementNewClass ('Sodium', '23', '1807');
+newElement.getMass() // "23 u"
+newElement.getYear() // ""
+
+{% endhighlight %}
+
+Klasa `chemicalElementNewClass`, przy pomocy **`extends`** dzidziczy po `chemicalElement`. 
+
+
+Ponad to w konstruktorze klasy `chemicalElementNewClass`, wykonywany jest konstruktor klasy dziedziczonej poprzez 
+wywołanie z **`super`**. 
+
+
+Metoda `getName()` zostaje nadpisana w klasie `chemicalElementNewClass` i wykonuje
+metodę `getName()` z klasy dziedziczonej również przy użyciu słowa kluczowego `super`. 
+ 
+ 
+Dodatkowo klasa `chemicalElementNewClass` została wzbogacona o swoją własną metodę `getYear()`.
+ 
 # **4. Deklarowanie zmiennych za pomocą słówka ```let```, ```const```**#
 [Odnośnik_1][Odnośnik_1]
 
-[Odnośnik_1]: https://justynabed.github.io/Til//es6/nowe-zmienne/
+[Odnośnik_1]: https://justynabed.github.io/Til//js/es6/let-const/
 
 
 
