@@ -169,7 +169,7 @@ var newElement = new chemicalElement ('Hydrogen', '1');
 newElement.getMass() // "1 u"
 {% endhighlight %}
 
-ES5:
+ES6:
 {% highlight ruby %}
 class chemicalElement {
     constructor (name, mass) {
@@ -190,7 +190,7 @@ let newElement = new chemicalElement ('Calcium', '40');
 newElement.getMass() // "40 u"
 {% endhighlight %}
 
-W nowym zapisie mamy konstruktor z dwoma argumentami: `name`, `mass`, dwa pola oraz dwie metody klasy: `getName()`, `getName()`.
+W nowym zapisie mamy konstruktor z dwoma argumentami: `name`, `mass`, dwa pola oraz dwie metody klasy: `getName()`, `getMass()`.
 Warto wspomnieć, że jeśli chcielibyśmy w szablonie `chemicalElement` posiadać metodę informującą o roku odkrycia danego pierwiastka chemicznego,
 to możemy skorzystać z **mechanizmu dziedziczenia klas**.
 
@@ -198,7 +198,8 @@ to możemy skorzystać z **mechanizmu dziedziczenia klas**.
 class chemicalElementNewClass extends chemicalElement {
 
   constructor (name, mass, year) {
-    super(name, mass, year); this.year = year
+    super(name, mass, year); 
+    this.year = year
   }
 
   getName () {
@@ -209,8 +210,8 @@ class chemicalElementNewClass extends chemicalElement {
 }
 
 let newElement = new chemicalElementNewClass ('Sodium', '23', '1807');
-newElement.getMass() // "23 u"
-newElement.getYear() // ""
+newElement.getMass(); // "23 u"
+newElement.getYear(); // "This chemical element was discovered: 1807"
 
 {% endhighlight %}
 
