@@ -44,7 +44,7 @@ const wordUp = word =>
 
 Arrow functions to nie tylko inny sposób zapisu funkcji.
 W odróżnieniu do standardowych funkcji, Arrow functions nie tworzy własnego
-zakresu słówka kluczowego `this`.
+zakresu słówka kluczowego `this` ( zmienia kontekst this, przyjmuje this z kodu otaczającego)
 
 ES5:
 {% highlight ruby %}  
@@ -152,26 +152,26 @@ Nowo powstały obiekt jest nazywany **instancją klasy** i tworzony jest za pomo
 
 ES5:
 {% highlight ruby %}
-function chemicalElement (name, mass) {
+function ChemicalElement (name, mass) {
   this.name = name;
   this.mass = mass;
 };
 
-chemicalElement.prototype.getName = function getName () {
+ChemicalElement.prototype.getName = function getName () {
   return this.name;
 };
 
-chemicalElement.prototype.getMass = function getMass () {
+ChemicalElement.prototype.getMass = function getMass () {
   return this.mass + ' u' ;
 };
 
-var newElement = new chemicalElement ('Hydrogen', '1');
+var newElement = new ChemicalElement ('Hydrogen', '1');
 newElement.getMass() // "1 u"
 {% endhighlight %}
 
 ES6:
 {% highlight ruby %}
-class chemicalElement {
+class ChemicalElement {
     constructor (name, mass) {
         this.name = name;
         this.mass = mass;
@@ -186,16 +186,16 @@ class chemicalElement {
     }
 }
 
-let newElement = new chemicalElement ('Calcium', '40');
+let newElement = new ChemicalElement ('Calcium', '40');
 newElement.getMass() // "40 u"
 {% endhighlight %}
 
 W nowym zapisie mamy konstruktor z dwoma argumentami: `name`, `mass`, dwa pola oraz dwie metody klasy: `getName()`, `getMass()`.
-Warto wspomnieć, że jeśli chcielibyśmy w szablonie `chemicalElement` posiadać metodę informującą o roku odkrycia danego pierwiastka chemicznego,
+Warto wspomnieć, że jeśli chcielibyśmy w szablonie `ChemicalElement` posiadać metodę informującą o roku odkrycia danego pierwiastka chemicznego,
 to możemy skorzystać z **mechanizmu dziedziczenia klas**.
 
 {% highlight ruby %}
-class chemicalElementNewClass extends chemicalElement {
+class ChemicalElementNewClass extends ChemicalElement {
 
   constructor (name, mass, year) {
     super(name, mass, year); 
@@ -209,24 +209,28 @@ class chemicalElementNewClass extends chemicalElement {
   getYear () {return (`This chemical element was discovered: ${this.year}`)}
 }
 
-let newElement = new chemicalElementNewClass ('Sodium', '23', '1807');
+let newElement = new ChemicalElementNewClass ('Sodium', '23', '1807');
 newElement.getMass(); // "23 u"
 newElement.getYear(); // "This chemical element was discovered: 1807"
 
 {% endhighlight %}
 
-Klasa `chemicalElementNewClass`, przy pomocy **`extends`** dzidziczy po `chemicalElement`. 
+Klasa `ChemicalElementNewClass`, przy pomocy **`extends`** dzidziczy po `ChemicalElement`. 
 
 
-Ponad to w konstruktorze klasy `chemicalElementNewClass`, wykonywany jest konstruktor klasy dziedziczonej poprzez 
+Ponad to w konstruktorze klasy `ChemicalElementNewClass`, wykonywany jest konstruktor klasy dziedziczonej poprzez 
 wywołanie z **`super`**. 
 
 
-Metoda `getName()` zostaje nadpisana w klasie `chemicalElementNewClass` i wykonuje
+Metoda `getName()` zostaje nadpisana w klasie `ChemicalElementNewClass` i wykonuje
 metodę `getName()` z klasy dziedziczonej również przy użyciu słowa kluczowego `super`. 
  
  
-Dodatkowo klasa `chemicalElementNewClass` została wzbogacona o swoją własną metodę `getYear()`.
+Dodatkowo klasa `ChemicalElementNewClass` została wzbogacona o swoją własną metodę `getYear()`.
+ 
+ 
+  Wprowadzenie klas w ES6 jest tylko tak zwanym **sugar code**. 
+  Nic nie zmienia, a jest tylko nakładką, która umożliwia nieco inne pisanie.
  
 # **4. Deklarowanie zmiennych za pomocą słówka ```let```, ```const```**#
 [Odnośnik_1][Odnośnik_1]
