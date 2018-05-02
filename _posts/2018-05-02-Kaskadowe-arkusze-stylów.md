@@ -211,3 +211,87 @@ color: red;
 + 2D Transforms (translate, rotate, scale, skew, matrix)
 + border-radius
 + box-shadow
+
+# **3. Co oznacza kaskadowość stylów?**
+Dzięki kaskadowości stylów jesteśmy w stanie nadpisywać style na stronie. Można to również określić jako: "rywalizację pomiędzy arkuszami stylów".
+
+Trzy sposoby wstawiania stylów CSS:
++ **External**- zewnętrznie, jako odzielny plik css.
+
+{% highlight ruby %}
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="float.css">
+</head>
+
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: navy;
+    margin-left: 20px;
+}
+
+ {% endhighlight %}
+ 
+ 
++ **Internal**- na stronie html, w znacznikach `<style>` w `<head>`.
+
+{% highlight ruby %}
+<head>
+<style>
+body {
+    background-color: blue;
+}
+
+h1 {
+    color: maroon;
+    margin-left: 40px;
+} 
+</style>
+</head>
+ {% endhighlight %}
+ 
+ 
++ **Inline**- wpisane inline’owo poprzez atrybut `style=""`.
+
+ {% highlight ruby %}
+<h1 style="color:red;margin-left:30px;">This is a heading</h1>
+ {% endhighlight %}
+ 
+ 
+ **Ważność stylów:**
+ 
+ inline > internal > external
+ 
+Jeżeli link z zewnętrznym arkuszem stylu jest nad znacznikiem 
+`<style>` to będzie **mniej ważny** i nagłówek `h5` będzie koloru niebieskiego.
+ 
+{% highlight ruby %}
+   <link rel="stylesheet" href="Klasy.css">
+   <style>
+   h5 {
+       color: blue
+   }
+   </style>
+   </head>
+   <body>
+   <h5 >Nagłówek h5</h5>
+{% endhighlight %}
+  
+ W tym przypadku, gdy link jest pod znacznikiem `<style>`
+ jego reguły będą **ważniejsze** i w tym przypadku `h5` będzie koloru czerwonego.
+ 
+{% highlight ruby %}
+   <style>
+   h5 {
+       color: blue
+   }
+   </style>
+   <link rel="stylesheet" href="Klasy.css">
+</head>
+<body>
+<h5 >Nagłówek h5</h5>
+{% endhighlight %}
