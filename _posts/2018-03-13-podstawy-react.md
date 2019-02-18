@@ -28,7 +28,7 @@ _b)	Język JSX_
 Drugą z cech szczególnych React jest język **JSX**. 
 Jest on nakładką na JavaScript, która dodaje możliwość wstawiania kodu HTML (lub komponentów React) bezpośrednio w kodzie, zamiast ciągu znaków.
 
-# 2.Komponenty#
+# 2.Komponenty
 
 Do utworzenia potężnej aplikacji wykorzystuje się małe zarządzalne komponenty.
 
@@ -153,7 +153,7 @@ Po wywołaniu tej motody dochodzi do uaktualnienia interfejsu użytkownika.
 Dochodzi to poprzez mechanizm kolejkowania, który efektywnie grupuje zmiany.
 
 
-# 2. DWA SPOSOBY TWORZENIA KOMPONENTÓW#
+# 2. DWA SPOSOBY TWORZENIA KOMPONENTÓW
 
 
 a)	**Za pomocą funkcji**- jeśli nic się nie zmienia

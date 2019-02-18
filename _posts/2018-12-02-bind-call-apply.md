@@ -8,7 +8,7 @@ tags: [JS, bind, call, apply ]
 są metodami (funkcjami) JavaScript, dzięki którym możemy sterować kontekstem wywołania funkcji.
 Metody te tworzy nowe funkcje mającą tę samą treść, co funkcja pierwotna.
 
-### **1. Bind()**###
+### **1. Bind()**
 + Ustawia kontekst (**`this`**) na podany element. 
 + Zwraca funkcję z odpowiednio ustawionym `this`.
 + Zwraca zbindowaną kopię funkcji. 
@@ -39,7 +39,7 @@ Przy wywołaniu **`userHello()`** `this` jest ustawione na zakres globalny, wię
 
 **`person.sayHello.bind(person)`** w odróżnieniu od `apply` i `call` nie wywołuje metody od razu, tylko zwraca funkcję z odpowiednio ustawionym `this`.
 
-### **2. Call(), Apply()**### 
+### **2. Call(), Apply()**
 + Ustawia kontekst na podany pierwszy parametr, kolejne przekazuje jako parametry i zwraca wynik funkcji.
 
 + Obie metody za pierwszy parametr przyjmują obiekt, który ma zostać użyty jako `this`. 

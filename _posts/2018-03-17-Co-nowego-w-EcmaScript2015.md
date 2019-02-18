@@ -9,7 +9,7 @@ Sporządzono wtedy dokument jak dokładnie ten język ma działać.
 
 Nowości ECMAScript2015 (ES6):
 
-# **1. Arrow functions (fat arrow function)**#
+# **1. Arrow functions (fat arrow function)**
 
 Funkcja strzałkowa (funkcja grubo-strzałkowa) w odróżnieniu od standardowych funkcji ma krótszy zapis.
 
@@ -96,7 +96,7 @@ Arrow Functions nie możemy użyć jako konstruktora przy pomocy operatora `new`
                                         at <anonymous>:1:16
 {% endhighlight %}
                                
-# **2. Templete string**#
+# **2. Templete string**
 
 
 EcmaScript 2015 wprowadza nowy sposób 
@@ -116,7 +116,7 @@ let message = `Hello ${name}`
 console.log(message)      // Hello "Justyna"
 {% endhighlight %}
 
-# **3. Destrukturyzacja**#
+# **3. Destrukturyzacja**
 
 Możemy uzyskać łatwo dostęp do zagnieżdżonych wartości w tablicach i obiektach.
 
@@ -141,7 +141,7 @@ let [a1, b2, b3] = arrTwo
 console.log(a1, b2, b3)
 {% endhighlight %}
 
-# **4. Klasy**#
+# **4. Klasy**
 
 Klasa definuje obiekt, który jest stworzony na podstawie tej klasy. Nowo powstały obiekt jest nazywany instancją klasy.
 Klasa definiuje składowe poprzez **pola klasy**.
@@ -232,7 +232,7 @@ Dodatkowo klasa `ChemicalElementNewClass` została wzbogacona o swoją własną 
   Wprowadzenie klas w ES6 jest tylko tak zwanym **sugar code**. 
   Nic nie zmienia, a jest tylko nakładką, która umożliwia nieco inne pisanie.
  
-# **4. Deklarowanie zmiennych za pomocą słówka ```let```, ```const```**#
+# **4. Deklarowanie zmiennych za pomocą słówka ```let```, ```const```**
 [Odnośnik_1][Odnośnik_1]
 
 [Odnośnik_1]: https://justynabed.github.io/Til//js/es6/let-const/

@@ -15,7 +15,7 @@ odpowiedniego selektora elementu (lub zbioru elementów) i przypisanie do niego 
 określa do jakich elementów odnosi się dana reguła.
 
 
-### Selektor uniwersalny###
+### Selektor uniwersalny
 Odnosi się do wszystkich elementów na stronie. 
 {% highlight ruby %}
 * {
@@ -25,7 +25,7 @@ Odnosi się do wszystkich elementów na stronie.
 
 *-asterysk
 
-### Selektor typu###
+### Selektor typu
 Odnosi się do elemektów o konkretnej nazwie.
 
 {% highlight ruby %}
@@ -49,7 +49,7 @@ p {
 **Arial:** wartość,
 
 
-### Selektor identyfikatora###
+### Selektor identyfikatora
 odnosi się do elementów , których wartość atrybutu **`id`** odpowiada
 wartości podanej za znakiem **"`#`"**. 
 
@@ -66,7 +66,7 @@ Stylowanie za pomocą id:
 }
 {% endhighlight %}
 
-### Selektor klasy###
+### Selektor klasy
 odnosi się do elementów , których wartość atrybutu **`class`** odpowiada
 wartości podanej za znakiem **"`.`"**. 
 
@@ -129,7 +129,7 @@ Selektor klasy wybiera się, gdy:
  
  
  
-### Selektor elementu dziecka###
+### Selektor elementu dziecka
  
  Odnosi się do elementów, które są dziećmi innego, określonego elementu.
  
@@ -151,7 +151,7 @@ color: red;
  {% endhighlight %}
  
   ![Selektor elementu dziecka]({{ "./assets/img1.PNG"" | absolute_url }})
-### Selektor elementu potomnego###
+### Selektor elementu potomnego
   
   Odnosi się do elementów będących elemntami potomnymi innego, określonego elementu.
   
@@ -175,7 +175,7 @@ color: red;
   
   ![Selektor elementu potomnego]({{ "./assets/img2.PNG"" | absolute_url }})
   
-### Selektor elementów sąsiadujących bezpośrednio###
+### Selektor elementów sąsiadujących bezpośrednio
   Odnosi się do elementów bezpośrednio sąsiadujących z innym, określonym elementem.
   
   {% highlight ruby %}
@@ -191,7 +191,7 @@ color: red;
   ![Selektor elementów sąsiadujących bezpośrednio]({{ "./assets/img3.PNG"" | absolute_url }})
 
   
-### Ogólny selektor elementów sąsiadujących###
+### Ogólny selektor elementów sąsiadujących
    Odnosi się do elementów sąsiadujących z innym elementem, choć niekoniecznie bezpośrednio.
    
    {% highlight ruby %}
