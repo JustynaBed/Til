@@ -237,6 +237,49 @@ Dodatkowo klasa `ChemicalElementNewClass` została wzbogacona o swoją własną 
 
 [Odnośnik_1]: https://justynabed.github.io/Til//js/es6/let-const/
 
+# **5. Spread operator ```...```** 
+
+`numbersTwo` i `numbers` łączy referencja i obie zmienne wskazują na ten sam obiekt w pamieci.
+
+{% highlight ruby %}
+let numbers = [1, 2, 3];
+
+let numbersTwo = numbers;
+console.log(numbersTwo === numbers)
+
+console.log('tablica numbers przed zmianą',  numbers)
+console.log('tablica numbersTwo przed zmianą', numbersTwo)
+
+numbersTwo[0] = "brak cyfry"
+console.log('tablica numbers po zmianie', numbers)
+console.log('tablica numbersTwo po zmianie', numbersTwo)
+
+//true
+//tablica numbers przed zmianą (3) [1, 2, 3]
+//tablica numbersTwo przed zmianą (3) [1, 2, 3]
+//tablica numbers po zmianie (3) ["brak cyfry", 2, 3]
+//tablica numbersTwo po zmianie (3) ["brak cyfry", 2, 3]
+{% endhighlight %}
 
 
+ES6, kopiowanie bez referencji:
+{% highlight ruby %}
+let numbers = [1, 2, 3];
+
+let numbersTwo = [...numbers];
+console.log(numbersTwo === numbers)
+
+console.log('tablica numbers przed zmianą',  numbers)
+console.log('tablica numbersTwo przed zmianą', numbersTwo)
+
+numbersTwo[0] = "brak cyfry"
+console.log('tablica numbers po zmianie', numbers)
+console.log('tablica numbersTwo po zmianie', numbersTwo)
+
+//false
+//tablica numbers przed zmianą (3) [1, 2, 3]
+//tablica numbersTwo przed zmianą (3) [1, 2, 3]
+//tablica numbers po zmianie (3) [1, 2, 3]
+//tablica numbersTwo po zmianie (3) ["brak cyfry", 2, 3]
+{% endhighlight %}
 
